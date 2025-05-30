@@ -6,7 +6,7 @@ class Appointment {
   final String doctorName;
   final DateTime appointmentDateTime;
   final String appointmentCode;
-  String status; // 'pending', 'completed', 'cancelled'
+  String status; // 'pendiente', 'completao', 'cancelao'
   String? diagnosis;
   String? prescription;
 
