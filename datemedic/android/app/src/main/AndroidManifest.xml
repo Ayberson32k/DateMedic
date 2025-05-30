@@ -1,8 +1,22 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <application
-        android:label="datemedic"
+        android:label="Date Medic"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
+
+    <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyB6APEG0vdrKINWF1Vd_kuojspJXUJmw6I" />
+
+        <provider
+    android:name="androidx.core.content.FileProvider"
+    android:authorities="${applicationId}.provider"
+    android:exported="false"
+    android:grantUriPermissions="true">
+    <meta-data
+        android:name="android.support.FILE_PROVIDER_PATHS"
+        android:resource="@xml/file_paths"></meta-data>
+</provider>
         <activity
             android:name=".MainActivity"
             android:exported="true"
