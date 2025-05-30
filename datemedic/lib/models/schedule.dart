@@ -2,8 +2,8 @@ class DoctorSchedule {
   final String id;
   final String doctorId;
   final int dayOfWeek; // 1 = Lunes, 7 = Domingo
-  final String startTime; // "HH:mm"
-  final String endTime; // "HH:mm"
+  final String startTime; 
+  final String endTime; 
 
   DoctorSchedule({
     required this.id,

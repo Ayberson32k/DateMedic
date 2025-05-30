@@ -1,7 +1,7 @@
 class User {
   final String id;
   final String email;
-  final String password; // En una app real, esta debería estar hasheada
+  final String password; 
   final String name;
   final String userType; // 'patient' o 'doctor'
 
@@ -14,7 +14,7 @@ class User {
   // Datos específicos del doctor
   final String? clinicName;
   final String?
-  doctorName; // Podría ser lo mismo que 'name' si es un solo doctor
+  doctorName; 
   final String? clinicPhone;
   final String? clinicAddress;
   final double? latitude;
