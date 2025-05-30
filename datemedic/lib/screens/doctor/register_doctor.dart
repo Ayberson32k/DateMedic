@@ -1,14 +1,13 @@
-// lib/screens/doctor/register_doctor.dart (Asegúrate de que esta sea la ruta correcta para este archivo)
+
 
 import 'package:flutter/material.dart';
-import 'package:google_maps_flutter/google_maps_flutter.dart'; // Mantener LatLng
+import 'package:google_maps_flutter/google_maps_flutter.dart'; 
 import '../../utils/constants.dart';
 import '../../widgets/custom_button.dart';
 import '../../widgets/profile_image.dart';
 import '../../services/auth_service.dart';
 import 'home_doctor.dart';
-// ¡Importa tu pantalla de selección de ubicación aquí!
-import 'package:datemedic/screens/maps/location_picker_screen.dart'; // <--- RUTA CORRECTA A TU ARCHIVO DEL MAPA
+import 'package:datemedic/screens/maps/location_picker_screen.dart'; 
 
 class RegisterDoctorScreen extends StatefulWidget {
   const RegisterDoctorScreen({Key? key}) : super(key: key);
@@ -87,12 +86,12 @@ class _RegisterDoctorScreenState extends State<RegisterDoctorScreen> {
   }
 
   void _openMapPicker() async {
-    // Aquí es donde necesitamos pasar la ubicación inicial de forma segura
+
     final result = await Navigator.push(
       context,
       MaterialPageRoute(
         builder: (context) => LocationPickerScreen(
-          // Pasa _selectedLocation, que puede ser null, y LocationPickerScreen lo manejará
+
           initialLocation: _selectedLocation,
         ),
       ),
@@ -159,16 +158,16 @@ class _RegisterDoctorScreenState extends State<RegisterDoctorScreen> {
                 keyboardType: TextInputType.phone,
               ),
               const SizedBox(height: 15),
-              // Campo de dirección: ahora lo llenará el mapa
+             
               TextField(
                 controller: _addressController,
-                readOnly: true, // Esto hace que el campo sea de solo lectura
+                readOnly: true, 
                 onTap: _openMapPicker, // Al tocarlo, abre el mapa
                 decoration: const InputDecoration(
                   labelText: 'Dirección (Toca para seleccionar en el mapa)',
                   border: OutlineInputBorder(),
                   prefixIcon: Icon(Icons.location_on),
-                  suffixIcon: Icon(Icons.map), // Añadir un icono para indicar que es seleccionable por mapa
+                  suffixIcon: Icon(Icons.map), 
                 ),
               ),
               const SizedBox(height: 15),
